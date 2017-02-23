@@ -7980,7 +7980,7 @@ declare module "react" {
 	      Shape: ShapeStatic,
 	      Surface: SurfaceStatic	
     }
-                                  
+            
     export interface KeyboardStatic extends NativeEventEmitter {
         dismiss: ()=>void
     }
