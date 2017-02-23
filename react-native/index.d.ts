@@ -2405,7 +2405,7 @@ declare module "react" {
     }
 
     /**
-     * @Deprecated since version 0.28.0
+     * @Deprecated sinc 0.28.0
      */
     export interface ActivityIndicatorIOSStatic extends React.ComponentClass<ActivityIndicatorIOSProperties> {
     }
@@ -4917,7 +4917,7 @@ declare module "react" {
 
     interface PlatformStatic {
         OS: PlatformOSType
-        Version?: number
+        Version: number
 
         /**
          * @see https://facebook.github.io/react-native/docs/platform-specific-code.html#content
