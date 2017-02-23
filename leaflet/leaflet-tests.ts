@@ -404,21 +404,28 @@ class MyMarker extends L.Marker {
 		super([12, 13]);
 	}
 }
+
 class MyLayer extends L.Layer {
 	constructor() {
 		super();
 	}
 }
+
 class MyIcon extends L.Icon {
 	constructor() {
 		super({iconUrl: 'icon.png'});
 	}
 }
+
 class MyDivIcon extends L.DivIcon {
 	constructor() {
 		super();
 	}
 }
+
+const divIcon = L.divIcon({html: ''});
+let defaultIcon = new L.Icon.Default();
+defaultIcon = new L.Icon.Default({imagePath: 'apath'});
 
 let myControlClass = L.Control.extend({});
 let myControl = new myControlClass();
@@ -440,3 +447,22 @@ L.marker([1, 2], {
 		iconUrl: 'my-icon.png'
 	})
 }).bindPopup('<p>Hi</p>');
+
+L.Util.extend({});
+L.Util.create({});
+L.Util.bind(() => {}, {});
+L.Util.stamp({});
+L.Util.throttle(() => {}, 123, {});
+L.Util.wrapNum(123, []);
+L.Util.falseFn();
+L.Util.formatNum(123);
+L.Util.trim('word   ');
+L.Util.splitWords('word word');
+L.Util.setOptions({}, {});
+L.Util.getParamString({});
+L.Util.template('template', {});
+L.Util.isArray({});
+L.Util.indexOf([], {});
+L.Util.requestAnimFrame(() => {});
+L.Util.cancelAnimFrame(1);
+L.Util.emptyImageUrl;

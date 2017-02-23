@@ -4917,7 +4917,7 @@ declare module "react" {
 
     interface PlatformStatic {
         OS: PlatformOSType
-        Version?: number
+        Version: number
 
         /**
          * @see https://facebook.github.io/react-native/docs/platform-specific-code.html#content
@@ -5533,7 +5533,15 @@ declare module "react" {
          * is false.
          */
         keyboardShouldPersistTaps?: boolean|'always'|'never'|'handled'
-
+	
+	/**
+	 * Called when scrollable content view of the ScrollView changes.
+	 * Handler function is passed the content width and content height as parameters: (contentWidth, contentHeight)
+	 * It's implemented using onLayout handler attached to the content container which this ScrollView renders.
+	 *
+	 */
+	onContentSizeChange?: (w: number, h: number) => void
+	
         /**
          * Fires at most once per frame during scrolling.
          * The frequency of the events can be contolled using the scrollEventThrottle prop.
